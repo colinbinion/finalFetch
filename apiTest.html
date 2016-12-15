@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("button").click(function(){
+        $.ajax({url: "https://api.vitelity.net/api.php?login=kgetrite&pass=C0l0rad0&cmd=subaccounts&do=list", success: function(result){
+            $("#div1").html(result);
+        }});
+    });
+});
+</script>
+</head>
+<body>
+
+<div id="div1"><h2>Change This Text</h2></div>
+
+<button>External Content</button>
+
+</body>
+</html>
