@@ -2,17 +2,26 @@ $(document).ready(function(){
 	
 //	balance
 	
-    $("button").click(function(){
-        $.ajax({url: "http://api.vitelity.net/api.php?login=kgetrite&pass=C0l0rad0&cmd=balance",
+    $("#getBal").click(function(event){
+		event.preventDefault()
+        $.ajax({url: "https://cors-anywhere.herokuapp.com/https://api.vitelity.net/api.php?login=kgetrite&pass=C0l0rad0&cmd=balance&xml=yes",
 			success: function(result){
-            	$("#div1").html(result);
+				console.log(result)
+				var $result= $(result)
+				var $balance = $result.find("response").text();
+				var $p = $('#balTtl')
+				$p.text('$'+$balance)
+				console.log($balance)
         }});
     });
 
 //  subaccount list
 
-	    $("button").click(function(){
+	    $("#getAcct").click(function(event){
+			event.preventDefault()
         $.ajax({url: "https://cors-anywhere.herokuapp.com/https://api.vitelity.net/api.php?login=kgetrite&pass=C0l0rad0&cmd=subaccounts&do=list&xml=yes", success: function(result){
+			var $sublist = $('#sublist')
+			$sublist.empty()
 			console.log(result)
 			var $result= $(result)
 			console.log($result)
@@ -25,7 +34,6 @@ $(document).ready(function(){
 				var subtxt =($subaccount.text())
 				$li.text(subtxt)
 				
-				var $sublist = $('#sublist')
 				$sublist.append($li)
 				console.log($subaccount.text())
 			

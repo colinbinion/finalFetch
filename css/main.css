@@ -13,6 +13,14 @@ header {
 	padding: 32px;
 }
 
+main {
+	background-image: url(../img/artboard-1.svg);
+	background-repeat: no-repeat;
+	background-position: 60% 3em;
+	background-size: 100vw 100vw;
+	ba
+}
+
 img {
 	width: 100%;
 	max-width: 100%;
@@ -28,7 +36,7 @@ footer {
 body {
 	margin-left: auto;
 	margin-right: auto;
-	background: #e6f4f8;
+	background: hsla(173,62%,98%,1.00);
 }
 
 .style-logo {
@@ -55,8 +63,10 @@ body {
 	background-image: url(images/hero.jpg);
 	background-size: cover;
 	padding: 20px 20px 50px 20px;
-	color: #FFFFFF;
+	color: #2D2D35;
 	text-align: center;
+	font-size: 56px;
+	text-shadow: 0px 0px 20px white, 0px 0px 6px white
 }
 
 h1 {
@@ -100,19 +110,39 @@ p {
 	text-decoration: none;
 }
 
-.info-box-tan {
-	background-color: #b9a88e;
+.info-box-grn2 {
+	background-color: #34A89B;
+	color: #FFFFFF;
+	padding: 30px 20px 60px;
+	text-align: center;
+	opacity: 0.87;
+}
+
+/*
+.info-box-grn3 {
+	background-color: #288278;
 	color: #FFFFFF;
 	padding: 30px 20px 60px;
 	text-align: center;
 }
+*/
 
+.info-box-grn4 {
+	background-color: #1f665e;
+	color: #FFFFFF;
+	padding: 30px 20px 60px;
+	text-align: center;
+	opacity: 0.87;
+}
+
+/*
 .info-box-dark {
 	background-color: #2D2D35;
 	color: #FFFFFF;
 	padding: 30px 20px 60px;
 	text-align: center;
 }
+*/
 
 .footer-text {
 	font-size: 13px;
@@ -204,3 +234,19 @@ body .bodyOp {
 	background: #3cc2b3;
 }
 */
+#sublist {
+	padding: 30px;
+	list-style: none;
+}
+
+#sublist li {
+	padding: 10px;
+	font-size: 28px;
+}
+
+
+#balTtl {
+	padding: 30px;
+	font-size: 56px;
+}
+
